@@ -1,0 +1,74 @@
+.courseGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.courseCard {
+  overflow: hidden;
+  transition: transform 0.15s, box-shadow 0.15s;
+  display: flex;
+  flex-direction: column;
+}
+.courseCard:hover { transform: translate(-2px, -4px); box-shadow: 0 10px 0 var(--ink); }
+.courseCover {
+  height: 170px;
+  border-bottom: 2.5px solid var(--ink);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+}
+.courseCoverDeco {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-self: flex-end;
+  width: 80px;
+}
+.decoLine {
+  height: 4px;
+  background: var(--ink);
+  border-radius: 2px;
+  opacity: 0.75;
+}
+.decoLine:nth-child(2) { width: 60%; }
+.decoLine:nth-child(3) { width: 40%; }
+.courseBody { padding: 20px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.courseTitle {
+  font-family: "Bricolage Grotesque";
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.15;
+  margin: 0;
+}
+.courseProf { font-size: 13px; color: var(--ink-3); }
+.courseMeta {
+  font-size: 13px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: var(--ink-2);
+  font-weight: 600;
+  margin-top: 4px;
+}
+.courseMeta .dot { color: var(--ink-3); }
+.courseFoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1.5px dashed var(--line-soft);
+  padding-top: 16px;
+  margin-top: auto;
+}
+.coursePrice { font-family: "Bricolage Grotesque"; font-size: 20px; }
+.courseCta { font-weight: 700; font-size: 14px; color: var(--orange); }
+
+@media (max-width: 960px) {
+  .courseGrid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .courseGrid { grid-template-columns: 1fr; }
+}
