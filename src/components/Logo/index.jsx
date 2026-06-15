@@ -1,6 +1,5 @@
 import styles from "./Logo.module.css";
 
-// Wordmark "Teach-ing" com o capelo no lugar do hífen
 function Logo({ size = 28 }) {
   const capH = size * 1.05;
   return (
