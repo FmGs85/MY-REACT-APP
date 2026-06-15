@@ -1,0 +1,31 @@
+.testiGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+.testi {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.testiQuote { font-family: "Bricolage Grotesque"; font-size: 60px; line-height: 0.6; color: var(--orange); }
+.testi p { font-size: 16px; line-height: 1.5; margin: 0; }
+.testiFoot { display: flex; align-items: center; gap: 12px; margin-top: auto; padding-top: 16px; border-top: 1.5px dashed var(--line-soft); }
+.testiAvatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  display: grid; place-items: center;
+  font-weight: 800;
+  font-size: 14px;
+}
+.testiFoot strong { display: block; font-size: 14px; }
+.testiFoot span { font-size: 13px; color: var(--ink-3); }
+
+@media (max-width: 960px) {
+  .testiGrid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  .testiGrid { grid-template-columns: 1fr; }
+}
