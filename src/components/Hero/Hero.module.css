@@ -1,0 +1,148 @@
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 64px 0 96px;
+  background:
+    radial-gradient(circle at 90% 10%, var(--yellow-soft) 0%, transparent 40%),
+    var(--bg);
+}
+.heroInner {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 64px;
+  align-items: center;
+}
+.heroLeft { max-width: 620px; }
+.heroTitle {
+  font-size: clamp(48px, 6vw, 84px);
+  margin: 22px 0 24px;
+}
+.heroTitle .hlOrange {
+  background: var(--orange);
+  color: #fff;
+  padding: 0 14px 4px;
+  border-radius: 12px;
+  display: inline-block;
+  line-height: 1.05;
+  transform: rotate(-1deg);
+}
+:root[data-theme="dark"] .heroTitle .hlOrange { color: var(--ink); }
+.heroSub {
+  font-size: 17px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  margin: 0 0 32px;
+  max-width: 520px;
+}
+.heroSearch {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 10px 10px 20px;
+  border-radius: 999px;
+}
+.searchIco { font-size: 22px; color: var(--ink-3); }
+.heroSearch input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: var(--ink);
+  font: inherit;
+  font-size: 15px;
+  padding: 8px 0;
+  min-width: 0;
+}
+.heroSearch input::placeholder { color: var(--ink-3); }
+.searchBtn { padding: 12px 22px; }
+
+.heroTags {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.heroTagsLabel { font-size: 13px; color: var(--ink-3); font-weight: 600; }
+.heroTag {
+  border: 1.5px solid var(--line-soft);
+  background: transparent;
+  color: var(--ink-2);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.15s;
+}
+.heroTag:hover { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+
+/* Hero direita — cards compostos */
+.heroRight { position: relative; height: 520px; }
+.heroArt { position: relative; width: 100%; height: 100%; }
+.artCard {
+  position: absolute;
+  background: var(--card);
+  border: 2.5px solid var(--ink);
+  border-radius: 18px;
+  box-shadow: var(--shadow-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 2;
+}
+.artCard1 { top: 40px; right: 20px; width: 320px; transform: rotate(2deg); }
+.artCard2 { bottom: 80px; left: -20px; width: 280px; transform: rotate(-3deg); }
+.artCard3 { bottom: 0; right: 60px; width: 200px; transform: rotate(4deg); padding: 20px; }
+
+.artCardHead { display: flex; justify-content: space-between; align-items: center; }
+.artTime { font-weight: 700; font-family: "Bricolage Grotesque"; }
+.artThumb {
+  height: 130px;
+  border-radius: 10px;
+  border: 2px solid var(--ink);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.artThumb1 {
+  background:
+    repeating-linear-gradient(45deg, transparent 0 12px, rgba(0,0,0,0.08) 12px 13px),
+    var(--orange);
+}
+.artPlay {
+  width: 52px; height: 52px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--bg);
+  display: grid; place-items: center;
+  font-size: 18px;
+  padding-left: 3px;
+  box-shadow: 0 3px 0 var(--bg);
+}
+.artInfo { display: flex; flex-direction: column; gap: 4px; font-size: 13px; }
+.artInfo strong { font-size: 15px; }
+.artInfo span { color: var(--ink-3); }
+
+.artProgress { display: flex; flex-direction: column; gap: 6px; font-size: 12px; color: var(--ink-3); }
+.artProgressBar { height: 8px; border-radius: 99px; background: var(--bg-2); border: 1.5px solid var(--ink); overflow: hidden; }
+.artProgressBar > div { height: 100%; background: var(--orange); }
+.artCard2 strong { font-size: 15px; }
+.artMuted { color: var(--ink-3); font-size: 12px; }
+
+.artStatNum { font-size: 56px; line-height: 1; color: var(--ink); }
+.artStars { color: var(--yellow); font-size: 16px; -webkit-text-stroke: 1px var(--ink); }
+
+.artBlob {
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+}
+.artBlob1 { width: 140px; height: 140px; background: var(--yellow); top: 100px; left: 60px; border: 2.5px solid var(--ink); }
+.artBlob2 { width: 80px; height: 80px; background: var(--orange); top: 0; right: 50px; border: 2.5px solid var(--ink); }
+
+@media (max-width: 960px) {
+  .heroInner { grid-template-columns: 1fr; }
+  .heroRight { display: none; }
+}
