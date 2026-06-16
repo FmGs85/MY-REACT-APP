@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Logo from "../Logo";
 import styles from "./Header.module.css";
 
@@ -5,11 +6,11 @@ function Header({ active = "home" }) {
   return (
     <nav className={styles.nav}>
       <div className={`container ${styles.navInner}`}>
-        <a href="#" aria-label="Teach-ing início">
+        <Link to="/" aria-label="Teach-ing início">
           <Logo size={28} />
-        </a>
+        </Link>
         <div className={styles.navLinks}>
-          <a href="#" className={active === "home" ? styles.active : ""}>Início</a>
+          <Link to="/" className={active === "home" ? styles.active : ""}>Início</Link>
           <a href="#">Cursos</a>
           <a href="#">Professores</a>
           <a href="#">Para empresas</a>

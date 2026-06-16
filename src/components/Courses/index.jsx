@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles from "./Courses.module.css";
 
 const COURSES = [
@@ -11,7 +12,7 @@ const COURSES = [
 
 function CourseCard({ c }) {
   return (
-    <a href="#" onClick={(e) => e.preventDefault()}>
+    <Link to={`/curso/${c.id}`}>
       <article className={`${styles.courseCard} card`}>
         <div className={styles.courseCover} style={{ background: c.cover }}>
           <span className={"pill " + c.tagColor}>{c.tag}</span>
@@ -37,7 +38,7 @@ function CourseCard({ c }) {
           </div>
         </div>
       </article>
-    </a>
+    </Link>
   );
 }
 

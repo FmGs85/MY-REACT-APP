@@ -1,0 +1,249 @@
+/* ---- Course hero ---- */
+.csHero {
+  background:
+    radial-gradient(circle at 80% 0%, var(--yellow-soft) 0%, transparent 45%),
+    var(--bg);
+  padding: 48px 0 64px;
+}
+.csHeroInner {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  gap: 56px;
+  align-items: start;
+}
+.csBreadcrumb {
+  display: flex;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--ink-3);
+  font-weight: 600;
+  margin-bottom: 22px;
+}
+.csBreadcrumb a { color: var(--ink-3); }
+.csBreadcrumb a:hover { color: var(--orange); }
+.csBcActive { color: var(--ink); }
+
+.csTitle {
+  font-size: clamp(40px, 5vw, 64px);
+  margin: 18px 0 20px;
+  max-width: 720px;
+}
+.csSubtitle {
+  font-size: 17px;
+  color: var(--ink-2);
+  line-height: 1.55;
+  margin: 0 0 28px;
+  max-width: 620px;
+}
+
+.csHeroStats {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.csStat { display: flex; align-items: center; gap: 8px; font-size: 14px; color: var(--ink-2); }
+.csStat strong { color: var(--ink); }
+.csStatDivider { width: 1px; height: 16px; background: var(--line-soft); }
+
+.csProfMini {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 18px;
+  border: 2px solid var(--ink);
+  border-radius: 14px;
+  background: var(--card);
+  width: fit-content;
+  box-shadow: var(--shadow);
+}
+.csProfMini > div { display: flex; flex-direction: column; gap: 2px; }
+.csProfLabel { font-size: 11px; color: var(--ink-3); text-transform: uppercase; letter-spacing: 0.06em; font-weight: 600; }
+.csProfMini strong { font-size: 15px; }
+.csProfRole { font-size: 13px; color: var(--ink-3); }
+
+.csAvatar {
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--ink);
+  display: grid; place-items: center;
+  font-weight: 800;
+  font-size: 14px;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+/* ---- CTA card ---- */
+.csHeroRight { position: sticky; top: 100px; }
+.csCta { overflow: hidden; }
+.csCtaCover {
+  height: 200px;
+  background:
+    repeating-linear-gradient(45deg, transparent 0 14px, rgba(0,0,0,0.08) 14px 15px),
+    var(--orange);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  border-bottom: 2.5px solid var(--ink);
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+:root[data-theme="dark"] .csCtaCover { color: var(--ink); }
+.csCtaPlay {
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: var(--ink);
+  color: var(--bg);
+  display: grid; place-items: center;
+  font-size: 22px;
+  padding-left: 4px;
+  box-shadow: 0 4px 0 var(--bg);
+  transition: transform 0.15s;
+}
+.csCtaCover:hover .csCtaPlay { transform: scale(1.06); }
+.csCtaPreview { font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; }
+.csCtaBody { padding: 22px; display: flex; flex-direction: column; gap: 12px; }
+.csPriceRow { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+.csPrice { font-size: 36px; line-height: 1; }
+.csPriceOld { font-size: 16px; color: var(--ink-3); text-decoration: line-through; }
+.csDiscount { padding: 4px 10px; font-size: 11px; }
+.csInstallments { font-size: 13px; color: var(--ink-2); margin-bottom: 4px; }
+.csBuy { width: 100%; padding: 16px; font-size: 16px; }
+.csTrial { width: 100%; padding: 14px; font-size: 14px; background: var(--bg); }
+.csIncludes { list-style: none; padding: 0; margin: 12px 0 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px; }
+.csIncludes li { display: flex; align-items: center; gap: 8px; }
+.csIncludes li span:first-child {
+  width: 20px; height: 20px;
+  border-radius: 50%;
+  background: var(--yellow);
+  border: 1.5px solid var(--ink);
+  color: var(--ink);
+  display: grid; place-items: center;
+  font-size: 11px;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+/* ---- Highlights strip ---- */
+.csHighlights {
+  background: var(--ink);
+  color: var(--bg);
+  border-top: 2.5px solid var(--ink);
+  border-bottom: 2.5px solid var(--ink);
+}
+:root[data-theme="dark"] .csHighlights { background: var(--bg-3); color: var(--ink); }
+.csHighlightsInner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 36px;
+  padding-top: 22px;
+  padding-bottom: 22px;
+  justify-content: space-between;
+}
+.csHighlight { display: flex; align-items: center; gap: 10px; font-size: 14px; font-weight: 600; }
+.csHighlightIco {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  background: var(--orange);
+  color: var(--ink);
+  display: grid; place-items: center;
+  font-size: 13px;
+  border: 1.5px solid currentColor;
+}
+
+/* ---- Curriculum ---- */
+.csCurriculum { padding: 64px 0 80px; }
+.csCurrHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 24px;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.csCurrH { font-size: 28px; margin: 0 0 6px; }
+.csCurrSub { font-size: 14px; color: var(--ink-3); font-weight: 600; }
+
+.csModules { display: flex; flex-direction: column; gap: 14px; }
+.csModule { overflow: hidden; transition: transform 0.15s, box-shadow 0.15s; }
+.csModule:hover { transform: translateY(-1px); }
+.csModule.isOpen { box-shadow: var(--shadow-lg); }
+.csModuleHead {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 22px;
+  padding: 22px 26px;
+  background: transparent;
+  border: none;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.csModuleN {
+  font-size: 36px;
+  color: var(--orange);
+  line-height: 1;
+  min-width: 60px;
+  font-family: "Bricolage Grotesque";
+}
+.csModuleInfo { display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.csModuleInfo strong { font-size: 18px; font-family: "Bricolage Grotesque"; letter-spacing: -0.01em; }
+.csModuleMeta { font-size: 13px; color: var(--ink-3); line-height: 1.45; }
+.csModuleToggle {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--bg-2);
+  border: 2px solid var(--ink);
+  display: grid; place-items: center;
+  font-size: 18px;
+  font-weight: 800;
+  flex-shrink: 0;
+  transition: background 0.15s, color 0.15s;
+}
+.csModule.isOpen .csModuleToggle { background: var(--orange); color: #fff; }
+:root[data-theme="dark"] .csModule.isOpen .csModuleToggle { color: var(--ink); }
+
+.csModuleItems {
+  list-style: none;
+  padding: 0 26px 24px 108px;
+  margin: -8px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.csModuleItems li {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 14px;
+  align-items: center;
+  padding: 12px 0;
+  border-top: 1px dashed var(--line-soft);
+  font-size: 14px;
+}
+.csItemIco {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: var(--yellow);
+  border: 1.5px solid var(--ink);
+  display: grid; place-items: center;
+  font-size: 10px;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+.csItemTitle { color: var(--ink); }
+.csItemTime { font-size: 13px; color: var(--ink-3); font-weight: 600; font-variant-numeric: tabular-nums; }
+
+/* ---- Responsive ---- */
+@media (max-width: 960px) {
+  .csHeroInner { grid-template-columns: 1fr; }
+  .csHeroRight { position: static; }
+  .csModuleHead { gap: 14px; padding: 18px; }
+  .csModuleN { font-size: 28px; min-width: 44px; }
+  .csModuleItems { padding-left: 60px; padding-right: 18px; }
+}
